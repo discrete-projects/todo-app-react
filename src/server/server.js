@@ -74,7 +74,6 @@ app.delete('/todos/:id', (req, res) => {
 });
 
 app.put('/todos/:id', (req, res) => {
-  console.log('HELL FROM PUT >>>>>>>>', req.body.data)
   // res.status(500).send({"message": "not implemented"});
  
   let id = req.params.id;
