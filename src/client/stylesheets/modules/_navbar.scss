@@ -1,0 +1,46 @@
+// Navbar module
+.navbar {
+  width: 100%;
+  height: 40px;
+  background-color: #E7E7E7;
+}
+
+.navbar_inner {
+  width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+
+  &__item {
+    text-decoration: none;
+    font-size: 12px;
+    color: #BFBFBF;
+    line-height: 40px;
+    margin-right: 15px;
+    font-weight: 800; 
+  }
+
+  &__item--active {
+    font-weight: 700;
+    color: #7C7C7C;
+  }
+}
+
+.navbar_archive-completed {
+  width: 140px;
+  height: 24px;
+  background-color: #55BA36;
+  color: white;
+  font-size: 10px;
+  padding: 7px 18px;
+  border-radius: 5px;
+  margin-left: auto; 
+  text-decoration: none;
+
+  cursor: pointer;
+}

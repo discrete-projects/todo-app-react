@@ -1,0 +1,21 @@
+// Navbar module
+.subnav {
+  width: 100%;
+  max-width: 1000px;
+  height: 40px;
+  margin: 30px auto;
+
+  span {
+    color: #7B7B7B;
+    font-size: 15px;
+  }
+
+  button {
+    border: none;
+    font-size: 10px;
+    margin-left: 5px;
+    font-weight: 800;
+    color: #518EF7;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,158 @@
+// Todo module.
+.todo_wrapper {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.todo {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 37px 25px;
+  border-bottom: solid 1px #E7E7E7;
+  cursor: pointer;
+
+  &--status-complete {
+    .todo-link {
+      text-decoration: line-through;
+    }
+
+    .todo_archive-btn {
+      display: block!important;
+    }
+  }
+
+  &--filtered {
+      display: none;
+  }
+
+  .todo_archive-btn {
+    width: 67px;
+    height: 25px;
+    background-color: #55BA36;
+    color: white;
+    font-size: 10px;
+    padding: 7px 0;
+    line-height: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    display: none;
+
+    cursor: pointer;
+  }
+
+  .todo_close-btn {
+    margin-left: auto; 
+    border: none;
+    
+    &:after{
+      display: inline-block;
+      content: "\00d7"; 
+      font-size: 2rem;
+      color: #BABABA;
+    }
+  }
+}
+
+.todo_inner {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.todo_checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 17px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+    
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .todo_checkbox:after {
+      display: block;
+    }
+  }
+
+  .todo_checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    margin-right: 48px; 
+    border: dashed 1px #CFCFCF;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 19px;
+      border: solid #5DBE63;
+      margin-left: 1px;
+      margin-top: -15px;
+      border-width: 0 4px 4px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover input ~ .todo_checkbox {
+    background-color: #ccc;
+  }
+}
+
+.todo-form {
+  width: 493px;
+  height: 49px;
+  padding: 16px 20px;
+  margin: 100px auto;
+  border-radius: 5px;
+  border: solid 1px #EEEEEE;
+  display: block;
+  font-size: 20px;
+  
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  &::placeholder {
+    color: #BABABA;
+    font-size: 20px;
+  }
+}
+
+.todo-link {
+  font-size: 18px;
+  color: #7B7B7B;
+  line-height: 20px;
+}
